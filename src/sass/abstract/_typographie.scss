@@ -1,0 +1,37 @@
+$-ff-inter: 'Inter';
+
+$font-family-base: $-ff-inter;
+
+$font-sizes: (
+    "large": (
+        "900" : 4.8rem,
+        "800" : 4rem,
+        "700" : 3.2rem,
+        "400" : 2.4rem,
+        "300" : 2rem,
+    ),
+    "small": (
+        "900" : 2.4rem,
+        "800" : 2rem,
+        "700" : 1.6em,
+        "400" : 1.2em,
+        "300" : 1rem,
+    )
+  
+);
+
+$font-size-900: var(--fs-900);
+$font-size-800: var(--fs-800);
+$font-size-700: var(--fs-700);
+$font-size-400: var(--fs-400);
+$font-size-300: var(--fs-300);
+
+$-fw-300: 300;
+$-fw-400: 400;
+$-fw-600: 600;
+$-fw-700: 700;
+
+$font-weight-default: 300;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;

@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "breakpoints";
+
+// Mixin génération de média queries en fonction d'un mot clé ou d'une taille
+@mixin mq($size) {
+    // On test si la size correspond à une clé définit (desktop, tablet ou mobile)
+    @if map.has-key($breakpoints, $size) {
+        $breakpoint: map-get($breakpoints, $size);
+        // On créer la média queries correspondante
+        @media screen and (min-width: $breakpoint){
+            @content
+        }
+    } @else if meta.type-of($size) == number { 
+        @if math.is-unitless($size) {
+            @error 'Une unité est nécessaire quand vous utilisez mq avec un nombre';
+        } @else {
+            @media screen and (min-width: $size){
+                @content
+            }
+        }
+    } @else {
+        @error "la clé #{$size} n'existe pas dans la liste des breakpoints";
+    }
+}
+
+@mixin heading($fs, $transform: none, $color: $heading-color-default) {
+    font-size: $fs;
+    color: $color;
+    text-transform: $transform;
+
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+}

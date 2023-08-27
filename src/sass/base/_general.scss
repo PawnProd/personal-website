@@ -1,0 +1,19 @@
+@use '../abstract/' as *;
+
+
+html {
+    font-size: 62.5%; // Fait en sorte que 1rem = 10px
+
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    font-family: $body-font-family;
+    font-weight: $body-font-weight;
+    font-size: $body-font-size;
+    color: $body-text-color;
+    background-color: $body-background-color-default;
+    line-height: $body-line-height;
+}

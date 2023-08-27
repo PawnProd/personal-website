@@ -1,0 +1,23 @@
+// Couleurs contextuelles
+$color-neutral-000: hsl(0, 0, 100%);
+$color-primary-300: hsl(239, 33, 24%);
+$color-primary-700: hsl(235, 89, 35%);
+$color-primary-900: hsl(245, 60, 11%);
+$color-accent-300: hsl(346, 100, 51%);
+$color-accent-500: hsl(346, 100, 39%);
+
+// Mapping pour les utilitaires
+$colors: (
+    "neutral": (
+        "000" : $color-neutral-000
+    ),
+    "primary": (
+        "300": $color-primary-300,
+        "700": $color-primary-700,
+        "900": $color-primary-900,
+    ),
+    "accent": (
+        "300" : $color-accent-300,
+        "500": $color-accent-500
+    )
+)

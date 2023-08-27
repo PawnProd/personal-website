@@ -1,0 +1,44 @@
+@use "colors";
+@use "typogrgraphie";
+
+// Contexte
+$color-text-default: $color-neutral-000;
+$color-background-default: $color-primary-900;
+
+$border-radius-1: 1rem;
+$border-radius-2: 5rem;
+
+$box-shadow-1: 12px 12px 19px rgba(255, 6, 66, 0.2);
+
+// Body
+$body-font-family: $font-family-base;
+$body-font-size: $font-size-400;
+$body-line-height: 1.5;
+$body-font-weight: $font-weight-default;
+$body-text-color: $color-text-default;
+$body-background-color-default: $color-background-default;
+
+// Links
+
+// Headings
+$heading-font-family: $font-family-base;
+$heading-color-default: $color-text-default;
+$heading-font-weight: $font-weight-bold;
+$heading-line-height: 1.2;
+
+$heading-1-font-size: $font-size-800;
+$heading-2-font-size: $font-size-700;
+
+// Buttons
+$button-font-family: $font-family-base;
+$button-font-size: $font-size-400;
+$button-font-weight: $font-weight-default;
+$button-padding: 0.75em 2em;
+$button-border: 0;
+$button-border-radius: $border-radius-2;
+
+$button-accent-color: $color-neutral-000;
+$button-accent-background: $color-accent-300;
+$button-accent-color-hover: $color-neutral-000;
+$button-accent-background-hover: $color-accent-500;
+

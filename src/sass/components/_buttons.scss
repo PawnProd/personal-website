@@ -1,0 +1,42 @@
+@use '../abstract/' as *;
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+
+    padding: $button-padding;
+    border: $button-border;
+    border-radius: $button-border-radius;
+
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    line-height: 1;
+    text-transform: none;
+    
+    cursor: pointer;
+    transition: 275ms ease;
+
+    &[data-type="accent"] {
+        &[data-variant="contained"]{
+            color: $button-accent-color;
+            background-color: $button-accent-background;
+
+            &:is(:hover, :focus) {
+                color: $button-accent-color-hover;
+                background-color: $button-accent-background-hover;
+            }
+        }
+
+        &[data-variant="outlined"]{
+            color: $button-accent-color;
+            background-color: transparent;
+            border: solid 2px $button-accent-background;
+
+            &:is(:hover, :focus) {
+                color: $button-accent-color-hover;
+                background-color: $button-accent-background;
+            }
+        }
+    }
+}

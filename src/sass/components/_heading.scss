@@ -1,0 +1,9 @@
+@use '../abstract/' as *;
+
+.heading-1 {
+    @include heading($heading-1-font-size, uppercase);
+}
+
+.heading-2 {
+    @include heading($heading-2-font-size);
+}
