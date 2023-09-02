@@ -1,3 +1,4 @@
-@forward "general";
-@forward "font-face";
-@forward "reset";
+@use "general";
+@use "font-face";
+@use "reset";
+@use "root";

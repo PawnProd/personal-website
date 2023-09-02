@@ -1,0 +1,83 @@
+@use '../abstract/' as *;
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 3rem;
+        padding: $site-header-padding;
+        border-radius: $site-header-border-radius;
+    
+        color: $site-header-color;
+        background-color: $site-header-background-color;
+        box-shadow: 0 7px 7px transparentize($color-accent-300, 0.85);
+    }
+}
+
+.nav {
+    --flex-column-gap: 3.5rem;
+
+    list-style: none;
+    
+    color: $navigation-color;
+    font-family: $navigation-font-family;
+    font-size: $navigation-font-size;
+    font-weight: $navigation-font-weight;
+
+    a {
+        color: $navigation-color;
+        text-decoration: $navigation-link-text-decoration;
+    }
+
+    &__item {
+        position: relative;
+
+        padding: calc(20px / 2);
+        overflow: hidden;
+    
+        min-inline-size: 30px;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            inset-inline: 0;
+            inset-block-end: 0;
+            block-size: 3px;
+        
+            background-color: $navigation-color-hover;
+        
+            scale: var(--_width, 0) 1;
+            translate: var(--_translate, 0);
+            transition: 
+                scale 300ms var(--_scale-delay, 0ms), 
+                translate 500ms var(--_translate-delay, 0ms);
+        }
+
+        &:hover {
+            --_width: 1;
+        }
+    }
+
+    @supports selector(:has(h1)) {
+        &__item:hover + &__item {
+            --_translate: -100%;
+            --_scale-delay: 300ms;
+            --_translate-delay: 200ms;
+        }
+        
+        &:has(+ :hover) {
+            --_translate: 100%;
+            --_scale-delay: 300ms;
+            --_translate-delay: 200ms
+        }
+    }
+}

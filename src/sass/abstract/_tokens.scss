@@ -1,5 +1,5 @@
-@use "colors";
-@use "typogrgraphie";
+@use "colors" as *;
+@use "typographie" as *;
 
 // Contexte
 $color-text-default: $color-neutral-000;
@@ -29,11 +29,34 @@ $heading-line-height: 1.2;
 $heading-1-font-size: $font-size-800;
 $heading-2-font-size: $font-size-700;
 
+// Layout
+$flex-group-gap: 2rem;
+
+$container-min-margin-inline: 3.8rem;
+$container-max-width: 136rem;
+
+// Site Header
+$site-header-background-color: transparentize($color-neutral-900, 0.5);
+$site-header-color: $color-text-default;
+$site-header-padding: 1.5rem 5rem;
+$site-header-margin: 0;
+$site-header-border-radius: $border-radius-2;
+
+
+// Navigation
+$navigation-color: $site-header-color;
+$navigation-color-hover: $color-accent-300;
+$navigation-font-size: $font-size-400;
+$navigation-font-family: $body-font-family;
+$navigation-font-weight: $font-weight-medium;
+$navigation-link-text-decoration: none;
+$navigation-gap: 3.7rem;
+
 // Buttons
 $button-font-family: $font-family-base;
 $button-font-size: $font-size-400;
 $button-font-weight: $font-weight-default;
-$button-padding: 0.75em 2em;
+$button-padding: 1em 2em;
 $button-border: 0;
 $button-border-radius: $border-radius-2;
 
