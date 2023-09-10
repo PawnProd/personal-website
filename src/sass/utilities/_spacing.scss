@@ -1,0 +1,64 @@
+@use '../abstract/' as *;
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+$spacing-shortcuts: (
+    'margin': 'm',
+    'padding': 'p',
+) !default;
+
+$spacing-directions: (
+    'top': 't',
+    'right': 'r',
+    'bottom': 'b',
+    'left': 'l',
+) !default;
+
+$spacing-horizontal: 'x' !default;
+$spacing-vertical: 'y' !default;
+
+
+@each $property, $shortcut in $spacing-shortcuts {
+    @each $name, $value in $sizes {
+        // Toutes directions
+        .#{$shortcut}-#{$name} {
+            #{$property}: $value !important;
+        }
+
+        .g-#{$name} {
+            gap: $value !important;
+        }
+
+        .gr-#{$name} {
+            row-gap: $value !important;
+        }
+        .gc-#{$name} {
+            column-gap: $value !important;
+        }
+
+        // Instructions cardinales
+        @each $direction, $suffix in $spacing-directions {
+            .#{$shortcut}#{$suffix}-#{$name} {
+                #{$property}-#{$direction}: $value !important;
+            }
+        }
+
+        // Axe horizontal
+        @if $spacing-horizontal != null {
+            .#{$shortcut}#{$spacing-horizontal}-#{$name} {
+                #{$property}-left: $value !important;
+                #{$property}-right: $value !important;
+            }
+        }
+
+        // Axe vertical
+        @if $spacing-vertical != null {
+            .#{$shortcut}#{$spacing-vertical}-#{$name} {
+                #{$property}-top: $value !important;
+                #{$property}-bottom: $value !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@use "../abstract/" as *;
+
+.flow > *:where(:not(:last-child)){
+    margin-top: var(--flow-spacer, 1em);
+}

@@ -1,0 +1,52 @@
+@use "../abstract" as *;
+
+// Font Family --------------------------------
+.ff-base {
+    font-family: $font-family-base;
+}
+
+// Font Size --------------------------------
+
+@each $screen-size, $size-map in $font-sizes {
+    @each $size-name, $size-value in $size-map {
+        @if $screen-size == mobile {
+            .fs-#{$size-name} {
+                font-size: var(--fs-#{$size-name});
+            }
+        }
+    }
+}
+
+// Font Weight --------------------------------
+
+.fw-300 {
+    font-weight: $font-weight-default;
+}
+.fw-400 {
+    font-weight: $font-weight-regular;
+}
+.fw-500 {
+    font-weight: $font-weight-medium;
+}
+.fw-600 {
+    font-weight: $font-weight-semi-bold;
+}
+.fw-700 {
+    font-weight: $font-weight-bold;
+}
+
+
+// Font Style --------------------------------
+.italic {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+// Align --------------------------------
+
+.text-centered {
+    text-align: center;
+}

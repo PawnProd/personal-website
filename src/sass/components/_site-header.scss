@@ -17,14 +17,23 @@
         border-radius: $site-header-border-radius;
     
         color: $site-header-color;
-        background-color: $site-header-background-color;
-        box-shadow: 0 7px 7px transparentize($color-accent-300, 0.85);
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    @include mq(desktop) {
+        &__inner {
+            background-color: $site-header-background-color;
+            box-shadow: 0 7px 7px transparentize($color-accent-300, 0.85);
+        }
+        
     }
 }
 
 .nav {
-    --flex-column-gap: 3.5rem;
+    --flex-column-gap: #{$navigation-gap};
 
+    display: none;
     list-style: none;
     
     color: $navigation-color;
@@ -79,5 +88,9 @@
             --_scale-delay: 300ms;
             --_translate-delay: 200ms
         }
+    }
+
+    @include mq(desktop) {
+        display: block;
     }
 }
