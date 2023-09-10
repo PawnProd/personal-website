@@ -1,0 +1,55 @@
+---
+import Button from "./Button";
+import {FaLinkedin, FaSquareTwitter} from "react-icons/fa6";
+import {FaLongArrowAltRight} from "react-icons/fa";
+---
+
+<section class="hero | section">
+    <div class="container | stack mx-auto flow">
+        <img class="avatar" src="/public/images/Avatar.png" alt="Photo of me as Avatar" />
+        <p class="fs-900 fw-400 text-centered"><span class="clr-accent-300 fw-600">Hello, Je suis Nathan</span>. Je suis un développeur <span class="clr-accent-300 fw-600">full-stack</span> passionné par la création de site et d’application web 100% <span class="fw-300 italic">personnalisable, optimisé et accessible.</span>
+        </p>
+        <div class="flex-group my-auto mx-auto mt-10">
+            <Button variant="contained"> Contactez moi ici <FaLongArrowAltRight className="ml-3" />
+            </Button>
+            <a><FaLinkedin size={40} /></a>
+            <a><FaSquareTwitter size={40}/></a>
+        </div>
+    </div>
+    <div class="circle-red"></div>
+    <div class="circle-blue"></div>
+</section>
+
+<style>
+    .hero {
+        margin-top: 214px;
+    }
+
+    .circle-red {
+        position: absolute;
+        top: 155px;
+        left: -20%;
+        width: 70%;
+        height: 1486px;
+        border-radius: 50%;
+        background: linear-gradient(35deg, var(--accent-300) 0%, transparent 100%
+        );
+        filter: blur(198px);
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .circle-blue {
+        position: absolute;
+        top: -619px;
+        right: -30%;
+        width: 60%;
+        height: 1223px;
+        border-radius: 50%;
+        background: linear-gradient(35deg, var(--primary-700) 0%, transparent 100%
+        );
+        filter: blur(198px);
+        opacity: 0.5;
+        z-index: -1;
+    }
+</style>
