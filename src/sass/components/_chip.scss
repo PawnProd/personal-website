@@ -1,0 +1,23 @@
+@use '../abstract/' as *;
+
+.Chip {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: $chip-padding;
+    border: $chip-border;
+    border-radius: $chip-border-radius;
+
+    font-family: $chip-font-family;
+    font-size: $chip-font-size;
+    font-weight: $chip-font-weight;
+    line-height: 1;
+    text-transform: none;
+
+    &[data-variant="outlined"] {
+        &[data-color="neutral"] {
+            border: solid 1px $chip-color-neutral;
+        }
+    }
+}

@@ -27,7 +27,7 @@ $heading-font-weight: $font-weight-bold;
 $heading-line-height: 1.2;
 
 $heading-1-font-size: $font-size-900;
-$heading-2-font-size: $font-size-700;
+$heading-2-font-size: $font-size-800;
 
 // Layout
 $flex-group-gap: 2rem;
@@ -64,4 +64,15 @@ $button-accent-color: $color-neutral-000;
 $button-accent-background: $color-accent-300;
 $button-accent-color-hover: $color-neutral-000;
 $button-accent-background-hover: $color-accent-500;
+
+// Chip
+$chip-font-family: $font-family-base;
+$chip-font-size: $font-size-400;
+$chip-font-weight: $font-weight-default;
+$chip-padding: 0.5em 1em;
+$chip-border: 0;
+$chip-border-radius: $border-radius-2;
+
+$chip-color-neutral: $color-neutral-000;
+
 

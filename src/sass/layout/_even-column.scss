@@ -1,0 +1,12 @@
+@use "../abstract/" as *;
+
+.even-columns {
+    display: grid;
+    gap: var(--grid-gap, 1rem);
+
+    @include mq(mobile) {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+  

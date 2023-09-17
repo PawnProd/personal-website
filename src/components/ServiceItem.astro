@@ -1,0 +1,21 @@
+---
+const {title} = Astro.props;
+---
+<div class="ServiceItem | flex-group">
+    <slot name="icon" />
+    <div class="ServiceItem__content | flow">
+        <h2 class="heading-2 uppercase">{title}</h2>
+        <slot name="description" />
+        <slot name="tags" />
+    </div>
+</div>
+
+<style>
+    .flow {
+        --flow-spacer: 1rem;
+    }
+   
+   .ServiceItem__content {
+        flex: 1;
+   }
+</style>

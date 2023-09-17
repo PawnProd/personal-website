@@ -1,0 +1,85 @@
+---
+import ServiceItem from "./ServiceItem.astro";
+import Title from "./Title.astro";
+import Chip from './Chip';
+import {MdDesignServices} from 'react-icons/md';
+---
+
+<section class="section">
+    <div class="flex-group mx-auto">
+        <Title>Mes services</Title>
+    </div>
+    
+    <div class="flow">
+        <ServiceItem title="Conception Graphique">
+            <MdDesignServices slot="icon" size={36}/>
+            <p class="fs-700" slot="description">A partir d’un cahier des charges, ou d’une identité graphique, nous travaillerons en collaboration afin de construire la maquette de votre site ou de votre application.</p>
+            <div class="flex-group my-auto" slot="tags">
+                <span class="fw-500 fs-700">Ce service inclut :</span>
+                <div class="flex-group">
+                    <Chip>Wireframe</Chip>
+                    <Chip>Maquettage</Chip>
+                    <Chip>Prototypage</Chip>
+                    <Chip>Design System</Chip>
+                </div>
+            </div>
+        </ServiceItem>
+        <ServiceItem title="Développement Web">
+            <MdDesignServices slot="icon" size={36}/>
+            <p class="fs-700" slot="description">Utilisation des outils adaptés pour créer votre site ou votre application de A à Z adapté à tous supports (tablette, mobile et ordinateurs) en suivant la maquette validée au préalable. Je peux aussi travailler sur des APIs en respectant les norme REST.</p>
+            <div class="flex-group my-auto" slot="tags">
+                <span class="fw-500 fs-700">Ce service inclut :</span>
+                <div class="flex-group" >
+                    <Chip>Design Responsive</Chip>
+                    <Chip>API REST</Chip>
+                    <Chip>Site Vitrine</Chip>
+                    <Chip>CMS</Chip>
+                    <Chip>Application</Chip>
+                    <Chip>Base de données</Chip>
+                </div>
+            </div>
+        
+        </ServiceItem>
+        <ServiceItem title="Formation">
+            <MdDesignServices slot="icon" size={36}/>
+            <p class="fs-700" slot="description">Je propose donc aussi d’intervenir dans des écoles pour donner les clés de la réussite aux nouveaux talents de demain ! J’emploi une pédagogie ludique basé sur un apprentissage par la pratique ! Chaque étudiant pourra consolider ses connaissances théoriques en travaillant sur des projets qu’ils pourront ensuite présenter dans leurs portfolios. Mon objectif est de les préparer au monde professionnel tout en développant leur curiosité !</p>
+        </ServiceItem>
+        <div class="even-columns">
+            <div class="bg-accent-300 p-10 border-radius-1">
+                <div class="stack mx-auto">
+                    <h3 class="heading-2 uppercase">Front-end</h3>
+                    <ul class="fs-400">
+                        <li>Apprentissage des fondations du web (HTML/CSS/JS)</li>
+                        <li>Accessibilité, W3C et WAI</li>
+                        <li>Développement avec React ou NextJS</li>
+                        <li>Utilisation de Tailwind ou Sass</li>
+                        <li>Mise en oeuvre de Typescript</li>
+                    </ul>
+                </div>
+              
+            </div>
+            <div class="bg-accent-300 p-10 border-radius-1">
+                <div class="stack mx-auto">
+                    <h3 class="heading-2 uppercase">Back-end</h3>
+                    <ul class="fs-400">
+                        <li>Développement en PHP en PDO</li>
+                        <li>Base de données MySQL</li>
+                        <li>API REST</li>
+                        <li>ORM</li>
+                        <li>GraphQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .flow {
+        --flow-spacer: 5rem;
+    }
+
+    .even-columns {
+        --grid-gap: 3rem;
+    }
+</style>

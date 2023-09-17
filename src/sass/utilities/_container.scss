@@ -6,4 +6,8 @@
 
     width: min(100% - var(--padding), var(--max-width));
     margin-inline: auto;
+
+    &container[data-type="full-bleed"] {
+        --max-width: 100%;
+      }
 }
