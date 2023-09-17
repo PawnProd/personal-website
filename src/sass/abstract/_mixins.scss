@@ -27,6 +27,8 @@
 }
 
 @mixin heading($fs, $transform: none, $color: $heading-color-default) {
+    display: inline-block;
+    
     font-size: $fs;
     color: $color;
     text-transform: $transform;

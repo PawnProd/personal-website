@@ -1,0 +1,14 @@
+---
+import Title from "./Title.astro";
+import Button from "./Button";
+import {HiDownload} from "react-icons/hi";
+---
+
+<section class="section flex-group mx-auto">
+    <Title>A propos de moi</Title>
+    <p class="fs-800 text-centered mb-12">J’ai toujours été passionné par la <span class="fw-500">création</span> ! Mais étant doté de deux mains gauches et d’un esprit tourné sur la logique, j’ai emprunté le chemin de la <span class="fw-500">programmation</span> pour exprimer ma créativité ! C’est ce que j’apprécie avec le développement. Avoir la capacité de donner de la vie a quelque chose d’abstrait ou immatériel ! Aujourd’hui, je souhaite mettre à disposition ces compétences afin <span class="fw-500">d’accompagner et d’aider</span> les gens à réaliser leurs projets. Curieux au naturel, à l’écoute et sociable, je suis toujours à la recherche des <span class="fw-500">meilleures solutions</span> pour vos projets et vos envies. </p>
+
+    <p class="fs-800 text-centered mb-12">Quand je ne suis pas derrière mon écran, je passe du temps à m’occuper de mon potager, à jouer du piano, à apprendre de nouvelles recettes ou à m’embarquer dans une lecture passionnante de science fiction !</p>
+
+    <Button>Télécharger mon CV <HiDownload className="ml-3" size={20}/> </Button>
+</section>

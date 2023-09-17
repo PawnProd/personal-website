@@ -24,4 +24,7 @@ body {
     color: $body-text-color;
     background-color: $body-background-color-default;
     line-height: $body-line-height;
+
+    overflow-x: hidden;
 }
+
