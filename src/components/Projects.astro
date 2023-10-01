@@ -1,0 +1,90 @@
+---
+import Chip from "./Chip";
+import Title from "./Title.astro";
+import {FaGithub} from 'react-icons/fa';
+import {TbWorldWww} from 'react-icons/tb';
+---
+
+<section class="section">
+    <div class="flex-group mx-auto">
+        <Title>Mes derniers projets</Title>
+    </div>
+    <div class="stack project-list">
+        <div class="projet">
+            <div class="even-columns">
+                <div class="stack">
+                    <h2 class="heading-2 fs-900 mb-3">Project Name</h2>
+                    <p class="fs-400 mb-13">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur mNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur maa</p>
+                    <div class="flex-group mb-6">
+                        <Chip>React</Chip>
+                        <Chip>Tailwind</Chip>
+                        <Chip>Php</Chip>
+                        <Chip>MySql</Chip>
+                    </div>
+                    <div class="flex-group" >
+                        <FaGithub size={42} />
+                        <TbWorldWww size={42} />
+                    </div>
+                </div>
+                <img class="project-img" src="/images/placeholder-project.png" alt="Placeholder" />
+            </div>
+        </div>
+        <div class="projet inverted">
+            <div class="even-columns">
+                <img class="project-img" src="/images/placeholder-project.png" alt="Placeholder" />
+                <div class="stack">
+                    <h2 class="heading-2 fs-900 mb-3">Project Name</h2>
+                    <p class="fs-400 mb-13">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur mNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur maa</p>
+                    <div class="flex-group mb-6">
+                        <Chip>React</Chip>
+                        <Chip>Tailwind</Chip>
+                        <Chip>Php</Chip>
+                        <Chip>MySql</Chip>
+                    </div>
+                    <div class="flex-group" >
+                        <FaGithub size={42} />
+                        <TbWorldWww size={42} />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projet">
+            <div class="even-columns">
+                <div class="stack">
+                    <h2 class="heading-2 fs-900 mb-3">Project Name</h2>
+                    <p class="fs-400 mb-13">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur mNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur maa</p>
+                    <div class="flex-group mb-6">
+                        <Chip>React</Chip>
+                        <Chip>Tailwind</Chip>
+                        <Chip>Php</Chip>
+                        <Chip>MySql</Chip>
+                    </div>
+                    <div class="flex-group" >
+                        <FaGithub size={42} />
+                        <TbWorldWww size={42} />
+                    </div>
+                </div>
+                <img class="project-img" src="/images/placeholder-project.png" alt="Placeholder" />
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<style>
+    .project-img {
+        max-height: 342px;
+    }
+
+    .project-list {
+        gap: 20rem;
+    }
+
+    .inverted .stack {
+        align-items: flex-end;
+    }
+
+    .inverted p {
+        text-align: right;
+    }
+</style>
