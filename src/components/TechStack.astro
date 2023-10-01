@@ -1,0 +1,56 @@
+---
+import Title from "./Title.astro";
+import InfiniteScroller from './InfiniteScroller';
+---
+
+<section class="section">
+    <div class="flex-group mx-auto">
+        <Title>Ma boîte à outils</Title>
+    </div>
+    <p class="fs-400 mb-10">J’utilise un panel d’outil que j’adapte en fonction de vos projets afin de vous offrir un site rapide, interactif et accessible. Ces outils sont modernes, stables et supportés par une large communauté. Terminer les constructeurs de sites-web tout fait ! Débloquer la pleine puissance du code !</p>
+    <InfiniteScroller client:only>
+        <div class="tech">
+            <img src="/public/images/tech-icons/react.svg" alt="React" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/tailwind.svg" alt="TailwindCSS" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/nextjs.svg" alt="NextJS" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/laravel.svg" alt="Laravel" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/sanity.svg" alt="Sanity" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/github.svg" alt="Github" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/sass.svg" alt="Sass" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/astro.svg" alt="Astro" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/figma.svg" alt="Figma" />
+        </div>
+        <div class="tech">
+            <img src="/public/images/tech-icons/wordpress.svg" alt="Wordpress" />
+        </div>
+    </InfiniteScroller>
+</section>
+
+<style>
+    .tech {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 12rem;
+        height: 12rem;
+        border-radius: 1.5rem;
+        background-color: hsl(239, 33%, 24%);
+    }
+</style>
