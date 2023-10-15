@@ -74,5 +74,17 @@ $chip-border: 0;
 $chip-border-radius: $border-radius-2;
 
 $chip-color-neutral: $color-neutral-000;
+$chip-color-primary: $color-primary-900;
 
+// Formulaire
+$form-input-fs: var(--fs-400);
+$form-input-fw: $font-weight-default;
+$form-input-color: $color-primary-900;
+$form-input-background-color: $color-neutral-000;
+$form-input-padding: 2.4rem 2rem;
+$form-input-border: none;
+$form-input-border-radius: $border-radius-1;
+
+$form-placeholder-color: $color-primary-300;
+$form-placeholder-fw: $font-weight-default;
 

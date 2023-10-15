@@ -1,0 +1,22 @@
+@use '../abstract/' as *;
+
+input,
+textarea {
+    padding: $form-input-padding;
+    border: $form-input-border;
+    border-radius: $form-input-border-radius;
+
+    color: $form-input-color;
+    background-color: $form-input-background-color;
+    font-size: $form-input-fs;
+    font-weight: $form-input-fw;
+}
+
+textarea {
+    resize: vertical;
+}
+
+::placeholder {
+    color: $form-placeholder-color;
+    font-weight: $form-placeholder-fw;
+}

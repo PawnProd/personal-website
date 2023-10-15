@@ -8,11 +8,25 @@
 
     width: fit-content;
 
+    &.fullwidth {
+        width: 100%;
+    }
+
     &.mx-auto {
         justify-content: center;
     }
 
     &.my-auto {
         align-items: center;
+    }
+
+    &.mx-end {
+        justify-content: center;
+    }
+
+    @include mq(desktop) {
+        &.mx-end {
+            justify-content: flex-end;
+        }
     }
 }
