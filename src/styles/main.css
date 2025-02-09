@@ -1,0 +1,32 @@
+:root {
+    --clr-neutral-000 : hsl(100, 100, 100%);
+
+    --clr-primary-200: hsl(260, 83, 72);
+    --clr-primary-400: hsl(254, 100, 58);
+    --clr-primary-700: hsl(252, 72, 16);
+    --clr-primary-800: hsl(259, 86, 9);
+    --clr-primary-900: hsl(261, 93, 6);
+
+    --ff-primary: "WorkSans", sans-serif;
+    --ff-secondary: "Inter", sans-serif;
+
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-secondary);
+
+    --fw-black: 900;
+    --fw-bold: 700;
+    --fw-semi-bold: 600;
+    --fw-regular: 400;
+    --fw-light: 300;
+
+    --fs-300: 2rem;
+    --fs-400: 2.4rem;
+    --fs-500: 3.2rem;
+    --fs-600: 5rem;
+
+    --fs-nav: var(--fs-400);
+    --fs-body: var(--fs-400);
+    --fs-button: var(--fs-400);
+    --fs-heading: var(--fs-600);
+    --fs-sub-heading: var(--fs-500);
+}
