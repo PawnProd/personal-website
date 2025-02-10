@@ -1,9 +1,27 @@
 ---
 import '../styles/reset.css';
 import '../styles/main.css';
+import { Image } from "astro:assets";
+
+import Button from "../components/Button.astro";
+
+import Title from '../components/Title.astro';
+import ServiceBlock from '../components/ServiceBlock.astro';
+
+import AstronautPlanetImg from '../assets/images/astronaut-planet.png';
+import AstronautCoffeeImg from '../assets/images/astronaut-coffee.png';
+import AstronautContactImg from '../assets/images/astronaut-contact.png';
+import MeAstronautImg from '../assets/images/me-astronaut.png';
+import RocketImg from '../assets/images/rocket-illustration.svg';
+
+import ThreeStarsIcon from '../assets/icons/three-stars.svg';
+import UserAstronautIcon from '../assets/icons/user-astronaut-solid.svg';
+import FlagIcon from '../assets/icons/flag-solid.svg';
+import ToolboxIcon from '../assets/icons/toolbox-solid.svg';
+import EnvelopIcon from '../assets/icons/envelope-open-solid.svg';
+
+
 import Nav from '../components/Nav.astro';
-import Hero from '../components/Hero.astro';
-import About from '../components/About.astro';
 ---
 <!doctype html>
 <html lang="en">
@@ -22,9 +40,167 @@ import About from '../components/About.astro';
 			</div>
 		</header>
 		<main>
-			<Hero />
-			<About />
+			<section class="hero-section">
+				<h1 class="hero-title">Créeons votre univers digital</h1>
+				<p><strong>Développeur full-stack</strong> passionné par la création de site et d’application web 100% personnalisable, optimisé et accessible.</p>
+				<Button>Commencer le voyage</Button>
+				<Image src={AstronautPlanetImg} alt="Astronaut with mac on planet" />
+				<Image src={AstronautCoffeeImg} alt="Astronaut with coffee on planet" />
+			</section>
+
+			<section class="service-section">
+				<div class="container">
+					<Title 
+						title="Votre voyage débute maintenant !"
+						subtitle="Découvrer un univers de possibilité grâce aux talents de notre pilote"
+					>
+						<ThreeStarsIcon />
+					</Title>
+			
+					<div class="service-grid">
+						<ServiceBlock
+							title="Votre design"
+							content="Ensemble, sublimons votre identité visuelle et donnons vie à vos idées !"
+						>
+							
+						</ServiceBlock>
+						<ServiceBlock
+							title="Code personnalisé"
+							content="Pour des solutions uniques et adaptées à vos besoins spécifque."
+						>
+							
+						</ServiceBlock>
+						<ServiceBlock
+							title="Rapide & optimisé"
+							content="Vos idées dopées à la puissance pour une performance sans compromis."
+						>
+							
+						</ServiceBlock>
+						<ServiceBlock
+							title="Accessible"
+							content="Une solution pensée inclusive avec une prise en main rapide et accessible à tous !"
+						>
+							
+						</ServiceBlock>
+						<ServiceBlock
+							title="Prêt pour mobile"
+							content="Faites briller votre site/application sur tous les appareils !"
+						>
+							
+						</ServiceBlock>
+						<ServiceBlock
+							title="Comme chez vous"
+							content="Créez une expérience web qui capture votre style unique et qui vous ressemble vraiment."
+						>
+							
+						</ServiceBlock>
+						<div class="service-block large">
+							<h1 class="service-block-title">
+								Besoin d'un formateur
+							</h1>
+							<p class="service-block-content">
+								Car l’univers de la programmation web est vaste, je me propose de former la jeunesse afin de les préparer à leur futur
+								voyage ! J’emploi une pédagogie ludique basé sur un apprentissage par la pratique ! Chaque étudiant pourra consolider
+								ses connaissances théoriques en travaillant sur des projets qu’ils pourront ensuite présenter dans leurs portfolios.
+								Mon objectif est de les préparer au monde professionnel tout en développant leur curiosité !
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about-section">
+				<div class="container">
+					<Title 
+						title="Un mot de votre pilote aux commandes"
+						subtitle="Ne faites pas attention aux lunettes, c’est pour le style"
+					>
+						<UserAstronautIcon width={24} />
+					</Title>
+					<div class="even-columns">
+						<p>
+							Bienvenue à bord de la fusée FullStack-X1. Je serai votre commandant de bord dans cet univers numérique et mon objectif est de vous guider dans votre projet de voyage dans l’univers digital. 
+							<br />
+							Ma passion pour le voyage et l'univers se reflète dans chaque ligne de  code que je rédige. Comme un explorateur de l'inconnu, je suis constamment à la recherche de nouvelles frontières à conquérir, de défis  à relever et d'idées à explorer. Avec mon esprit créatif comme  carburant, je transforme vos concepts en sites web ergonomiques, rapides et qui vous ressemble, prêts à décoller vers de nouveaux horizons numériques.
+							<br />
+							Lorsque je ne suis pas aux commandes de mon ordinateur, je trouve du réconfort en prenant soin de mon potager et de notre belle planète. Je trouve aussi du temps pour jouer du piano, explorer de nouvelles recettes culinaires ou me plonger dans une lecture passionnante de science-fiction.
+							<br />
+							<strong>Alors attachez vos ceintures et préparez-vous pour un voyage inoubliable  à travers le cyberespace. Avec moi comme votre pilote de confiance,  votre projet web est entre de bonnes mains  !</strong>
+						</p>
+						<div class="stack">
+							<Image src={MeAstronautImg} alt="Me in astronaut costume" />
+							<Button>Découvrir mon CV</Button>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+
+			<section class="projects-section">
+				<div class="container">
+					<Title 
+						title="Mes dernières mission dans le système"
+						subtitle="Et tout le monde est revenu vivant ! Officiellement...."
+					>
+						<FlagIcon width={24} />
+					</Title>
+					<!-- TODO : A compléter une fois qu'il y aura des projets -->
+				</div>
+				<RocketImg />
+			</section>
+
+			<section class="tools-section">
+				<div class="container">
+					<Title 
+						title="Ma boîte à outils"
+						subtitle="En cas de pépins sur la route !"
+					>
+						<ToolboxIcon width={24} />
+					</Title>
+
+					<div class="even-columns">
+						<p>
+							Je déploie un éventail d'outils que je personnalise en fonction de vos  projets pour vous offrir un site rapide, interactif et accessible. Ces  outils sont à la pointe de la modernité, stables, et bénéficient du  soutien d'une large communauté. Dites adieu aux constructeurs de sites préfabriqués ! Libérez tout le potentiel du code !
+						</p>
+						<div class="tools-galaxy">
+							<!-- TODO : A voir comment faire -->
+						</div>
+					</div>
+				</div>
+				
+			</section>
+
+			<section class="contact-section">
+				<div class="container">
+					<Title 
+						title="Prêt pour l’aventure ?"
+						subtitle="Envoyez votre message dans l’univers ! Enfin surtout à moi !"
+					>
+						<EnvelopIcon width={24} />
+					</Title>
+					<p>Si vous êtes intéressé et que vous souhaitez me contacter, merci de m’envoyer un mail directement à <strong>nathan.prospert@proton.me</strong> ou via ce formulaire</p>
+					<div class="even-columns">
+						<form>
+							<input type="text" name="name" placeholder="Votre Nom" aria-label="Nom" />
+							<input type="text" name="email" placeholder="Votre Email" aria-label="Email" />
+							<textarea name="name" placeholder="Votre message" aria-label="Message" />
+							<Button>Envoyer</Button>
+						</form>
+						<Image src={AstronautContactImg} alt="Astronaut with a phone" />
+					</div>
+				</div>
+				
+			</section>
 		</main>
+		<footer>
+			<div class="container">
+				<p>
+					© Nathan Prospert. Tous droits réservés
+					<br/>
+					Ce site à été développé avec React,  Astro, Tailwind, Typescript et Framer Motion. Hébergé par PlanetHoster
+				</p>
+			</div>
+		</footer>
 	</body>
 </html>
 
