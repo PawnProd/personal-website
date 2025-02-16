@@ -1,6 +1,9 @@
 ---
 import '../styles/reset.css';
 import '../styles/main.css';
+import '../styles/fonts.css';
+import '../styles/utility.css';
+
 import { Image } from "astro:assets";
 
 import Button from "../components/Button.astro";
@@ -19,6 +22,12 @@ import UserAstronautIcon from '../assets/icons/user-astronaut-solid.svg';
 import FlagIcon from '../assets/icons/flag-solid.svg';
 import ToolboxIcon from '../assets/icons/toolbox-solid.svg';
 import EnvelopIcon from '../assets/icons/envelope-open-solid.svg';
+import CropIcon from '../assets/icons/crop-simple-solid.svg';
+import CodeIcon from '../assets/icons/code-solid.svg';
+import BoltIcon from '../assets/icons/bolt-lightning-solid.svg';
+import GroupIcon from '../assets/icons/user-group-solid.svg';
+import MobileIcon from '../assets/icons/mobile-screen-button-solid.svg';
+import HomeIcon from '../assets/icons/house-chimney-solid.svg';
 
 
 import Nav from '../components/Nav.astro';
@@ -41,11 +50,11 @@ import Nav from '../components/Nav.astro';
 		</header>
 		<main>
 			<section class="hero-section">
-				<h1 class="hero-title">Créeons votre univers digital</h1>
-				<p><strong>Développeur full-stack</strong> passionné par la création de site et d’application web 100% personnalisable, optimisé et accessible.</p>
+				<h1 class="hero-title">Créeons <br /> votre univers <br /> digital</h1>
+				<p class="hero-desc"><strong>Développeur full-stack</strong> passionné par la création de site et d’application web 100% personnalisable, optimisé et accessible.</p>
 				<Button>Commencer le voyage</Button>
-				<Image src={AstronautPlanetImg} alt="Astronaut with mac on planet" />
-				<Image src={AstronautCoffeeImg} alt="Astronaut with coffee on planet" />
+				<Image class="img-astronaut-mac" src={AstronautPlanetImg} alt="Astronaut with mac on planet" />
+				<Image class="img-astronaut-coffee" src={AstronautCoffeeImg} alt="Astronaut with coffee on planet" />
 			</section>
 
 			<section class="service-section">
@@ -62,41 +71,41 @@ import Nav from '../components/Nav.astro';
 							title="Votre design"
 							content="Ensemble, sublimons votre identité visuelle et donnons vie à vos idées !"
 						>
-							
+							<CropIcon slot="icon" />
 						</ServiceBlock>
 						<ServiceBlock
 							title="Code personnalisé"
 							content="Pour des solutions uniques et adaptées à vos besoins spécifque."
 						>
-							
+							<CodeIcon slot="icon" />
 						</ServiceBlock>
 						<ServiceBlock
 							title="Rapide & optimisé"
 							content="Vos idées dopées à la puissance pour une performance sans compromis."
 						>
-							
+							<BoltIcon slot="icon" />
 						</ServiceBlock>
 						<ServiceBlock
 							title="Accessible"
 							content="Une solution pensée inclusive avec une prise en main rapide et accessible à tous !"
 						>
-							
+							<GroupIcon slot="icon"/>
 						</ServiceBlock>
 						<ServiceBlock
 							title="Prêt pour mobile"
 							content="Faites briller votre site/application sur tous les appareils !"
 						>
-							
+							<MobileIcon slot="icon"/>
 						</ServiceBlock>
 						<ServiceBlock
 							title="Comme chez vous"
 							content="Créez une expérience web qui capture votre style unique et qui vous ressemble vraiment."
 						>
-							
+							<HomeIcon slot="icon" />
 						</ServiceBlock>
 						<div class="service-block large">
 							<h1 class="service-block-title">
-								Besoin d'un formateur
+								Besoin d'un formateur ?
 							</h1>
 							<p class="service-block-content">
 								Car l’univers de la programmation web est vaste, je me propose de former la jeunesse afin de les préparer à leur futur
@@ -118,16 +127,19 @@ import Nav from '../components/Nav.astro';
 						<UserAstronautIcon width={24} />
 					</Title>
 					<div class="even-columns">
-						<p>
+						<p class="italic">
 							Bienvenue à bord de la fusée FullStack-X1. Je serai votre commandant de bord dans cet univers numérique et mon objectif est de vous guider dans votre projet de voyage dans l’univers digital. 
+							<br />
 							<br />
 							Ma passion pour le voyage et l'univers se reflète dans chaque ligne de  code que je rédige. Comme un explorateur de l'inconnu, je suis constamment à la recherche de nouvelles frontières à conquérir, de défis  à relever et d'idées à explorer. Avec mon esprit créatif comme  carburant, je transforme vos concepts en sites web ergonomiques, rapides et qui vous ressemble, prêts à décoller vers de nouveaux horizons numériques.
 							<br />
+							<br />
 							Lorsque je ne suis pas aux commandes de mon ordinateur, je trouve du réconfort en prenant soin de mon potager et de notre belle planète. Je trouve aussi du temps pour jouer du piano, explorer de nouvelles recettes culinaires ou me plonger dans une lecture passionnante de science-fiction.
+							<br />
 							<br />
 							<strong>Alors attachez vos ceintures et préparez-vous pour un voyage inoubliable  à travers le cyberespace. Avec moi comme votre pilote de confiance,  votre projet web est entre de bonnes mains  !</strong>
 						</p>
-						<div class="stack">
+						<div class="profil-picture-container">
 							<Image src={MeAstronautImg} alt="Me in astronaut costume" />
 							<Button>Découvrir mon CV</Button>
 						</div>
