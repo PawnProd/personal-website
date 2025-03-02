@@ -123,6 +123,8 @@ textarea {
 
     font-size: var(--fs-400);
 
+    z-index:100;
+
     .container {
         display: flex;
         flex-direction: row;
@@ -261,7 +263,6 @@ textarea {
 
 }
 
-
 .profil-picture-container {
     img {
         width: 60%;
@@ -291,4 +292,22 @@ textarea {
     margin-bottom: 5rem;
 
     font-size: var(--fs-500);
+}
+
+.footer {
+    position: relative;
+
+    padding: 8rem 0;
+    background-color: var(--clr-primary-900);
+
+    p {
+        text-align: center;
+    }
+
+    .footer-background {
+        position: absolute;
+        top: -7rem;
+        left: 0;
+        width: 100%;
+    }
 }
