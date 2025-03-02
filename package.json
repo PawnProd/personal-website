@@ -9,6 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@tsparticles/all": "^3.8.1",
+    "@tsparticles/engine": "^3.8.1",
     "astro": "^5.2.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "tsparticles-engine"
+    ]
   }
 }
