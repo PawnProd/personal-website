@@ -11,6 +11,7 @@ import Button from "../components/Button.astro";
 import Title from '../components/Title.astro';
 import ServiceBlock from '../components/ServiceBlock.astro';
 import ContactForm from '../components/ContactForm.astro';
+import ToolsSystem from '../components/ToolsSystem.astro';
 
 import AstronautPlanetImg from '../assets/images/astronaut-planet.png';
 import AstronautCoffeeImg from '../assets/images/astronaut-coffee.png';
@@ -131,7 +132,7 @@ import HeroBackgroundParticles from '../components/HeroBackgroundParticles.astro
 						<UserAstronautIcon width={24} />
 					</Title>
 					<div class="even-columns">
-						<p class="italic">
+						<p class="italic fs-400">
 							Bienvenue à bord de la fusée FullStack-X1. Je serai votre commandant de bord dans cet univers numérique et mon objectif est de vous guider dans votre projet de voyage dans l’univers digital. 
 							<br />
 							<br />
@@ -175,11 +176,12 @@ import HeroBackgroundParticles from '../components/HeroBackgroundParticles.astro
 					</Title>
 
 					<div class="even-columns">
-						<p>
+						<p class=fs-400>
 							Je déploie un éventail d'outils que je personnalise en fonction de vos  projets pour vous offrir un site rapide, interactif et accessible. Ces  outils sont à la pointe de la modernité, stables, et bénéficient du  soutien d'une large communauté. Dites adieu aux constructeurs de sites préfabriqués ! Libérez tout le potentiel du code !
 						</p>
 						<div class="tools-galaxy">
 							<!-- TODO : A voir comment faire -->
+							 <ToolsSystem />
 						</div>
 					</div>
 				</div>
@@ -213,6 +215,7 @@ import HeroBackgroundParticles from '../components/HeroBackgroundParticles.astro
 				</p>
 			</div>
 		</footer>
+		<script src="../js/main.ts"></script>
 	</body>
 </html>
 

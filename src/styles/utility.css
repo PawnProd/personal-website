@@ -1,8 +1,45 @@
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+
 .italic {
     font-style: italic;
 }
 
 .even-columns {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Permet de cacher un élément à l'écran tout en le gardant
+accessible pour les lecteurs d'écrans */
+.visually-hidden {
+    position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0,0,0,0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+@media (min-width: 100em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
 }
