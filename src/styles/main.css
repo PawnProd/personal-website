@@ -80,11 +80,20 @@ textarea {
     border: none;
     border-radius: 10rem;
 
+    cursor: pointer;
+
     box-shadow: 0 0 0 4px hsl(from var(--clr-neutral-000) h s l / .07);
 
     filter: drop-shadow(0 0 180px var(--clr-primary-400))
             drop-shadow(0 -4px 0 hsl(from var(--clr-neutral-000) h s l / .2))
             drop-shadow(0 1px 0 hsl(from var(--clr-neutral-000) h s l / .4));
+
+    transition: all 1s;
+
+    &:hover {
+        filter: none;
+        box-shadow: inset 0 0 1em var(--clr-primary-400), 0 0 1.5em var(--clr-primary-400);
+    }
 
     svg {
         width: 3.6rem;
@@ -196,7 +205,7 @@ textarea {
 }
 
 .hero-section {
-    margin-top: 14rem;
+    margin-top: 18rem;
 
     .hero-title {
         font-family: var(--ff-heading);
@@ -229,18 +238,26 @@ textarea {
     .Btn {
         margin-top: 7rem;
         margin-inline: auto;
+
+        animation: scale 15s 5s linear infinite ;
+
     }
 
     .img-astronaut-mac {
         position: absolute;
         left: 6.2rem;
         top: 33rem;
+        z-index: 10;
+        animation: floating 10s linear infinite forwards;
+
     }
 
     .img-astronaut-coffee {
         position: absolute;
         right: 3.6rem;
         top: 82rem;
+        z-index: 10;
+        animation: floating 8s linear infinite forwards;
     }
 }
 
@@ -448,3 +465,29 @@ textarea {
         }
     }
 }
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(2rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    3% {
+        transform: scale(1.1);
+    }
+    6% {
+        transform: scale(1);
+    }
+}
+
+
