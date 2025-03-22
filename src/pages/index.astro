@@ -16,6 +16,7 @@ import ToolsSystem from '../components/ToolsSystem.astro';
 import AstronautPlanetImg from '../assets/images/astronaut-planet.png';
 import AstronautCoffeeImg from '../assets/images/astronaut-coffee.png';
 import AstronautContactImg from '../assets/images/astronaut-contact.png';
+import AstronautTelescopeImg from '../assets/images/astronaut-telescope.png';
 import MeAstronautImg from '../assets/images/me-astronaut.png';
 import FooterBackgroundImg from '../assets/images/footer-background.png';
 import RocketImg from '../assets/images/rocket-illustration.svg';
@@ -31,6 +32,7 @@ import BoltIcon from '../assets/icons/bolt-lightning-solid.svg';
 import GroupIcon from '../assets/icons/user-group-solid.svg';
 import MobileIcon from '../assets/icons/mobile-screen-button-solid.svg';
 import HomeIcon from '../assets/icons/house-chimney-solid.svg';
+import ExternalIcon from '../assets/icons/arrow-up-right-from-square-solid.svg';
 
 
 import Nav from '../components/Nav.astro';
@@ -109,6 +111,14 @@ import HeroBackgroundParticles from '../components/HeroBackgroundParticles.astro
 							<HomeIcon slot="icon" />
 						</ServiceBlock>
 						<div class="service-block large">
+							<div class="circle-background">
+								<div class="circle"></div>
+								<div class="circle"></div>
+								<div class="circle"></div>
+								<div class="circle"></div>
+								<div class="circle"></div>
+								<div class="circle"></div>
+							</div>
 							<h1 class="service-block-title">
 								Besoin d'un formateur ?
 							</h1>
@@ -118,8 +128,14 @@ import HeroBackgroundParticles from '../components/HeroBackgroundParticles.astro
 								ses connaissances théoriques en travaillant sur des projets qu’ils pourront ensuite présenter dans leurs portfolios.
 								Mon objectif est de les préparer au monde professionnel tout en développant leur curiosité !
 							</p>
+							<a href="#" class="catalog-link">
+								<ExternalIcon />
+								Découvrir le catalogue de formation
+							</a>
+							<Image class="img-astronaut-telescope" src={AstronautTelescopeImg} alt="Astronaut with a telescope" />
 						</div>
 					</div>
+					
 				</div>
 			</section>
 
